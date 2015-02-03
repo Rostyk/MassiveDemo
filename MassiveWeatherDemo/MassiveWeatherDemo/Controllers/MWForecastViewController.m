@@ -22,6 +22,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *windSpeedLabel;
 @property (nonatomic, weak) IBOutlet UILabel *cityLabel;
 @property (nonatomic, weak) IBOutlet UILabel *datelabel;
+@property (nonatomic, weak) IBOutlet UILabel *humidityLabel;
 @end
 
 @implementation MWForecastViewController
@@ -36,7 +37,7 @@
 }
 
 
-#pragma mark forecast
+#pragma mark retrieve forecast
 
 - (void) setupForecast {
     self.datelabel.text = [NSDateHelper currentDateString];
@@ -59,13 +60,13 @@
     [[MWLocationManager sharedManager] updateLocationWithCompletionHandler:^(CLLocation *location, NSString *cityName, NSError *error, BOOL locationServicesDisabled) {
         
         if(location) {
-            self.cityLabel.text = cityName;
+            weakSelf.cityLabel.text = cityName;
             [weakSelf getForecastForLocation:location];
             [weakSelf handleCityName:cityName];
         }
         else {
             [weakSelf alert:error.localizedDescription];
-            [self removePreload];
+            [weakSelf removePreload];
         }
     }];
 }
@@ -78,7 +79,7 @@
         
     } failure:^(id responseObject, NSError *error) {
         [weakSelf alert:error.localizedDescription];
-        [self removePreload];
+        [weakSelf removePreload];
     } progress:^(NSInteger progressCount, NSInteger totalCount) {
         
     }
@@ -106,6 +107,11 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+
 }
 
 #pragma mark forecast UI
@@ -118,6 +124,8 @@
     self.temperatureLabel.text = [NSString stringWithFormat:@"%lu°", (unsigned long)[todayForecast.temperature floatValue]];
     self.windSpeedLabel.text = [NSString stringWithFormat:@"%lumph", (unsigned long)todayForecast.windSpeed];
     self.cloudLabel.text = [NSString stringWithFormat:@"%lu%%", (unsigned long)todayForecast.clouds];
+    self.humidityLabel.text = [NSString stringWithFormat:@"%lu%%", (unsigned long)todayForecast.humidity];
+    self.cloudImageView.image = [todayForecast icon];
 }
 
 - (void)handleCityName:(NSString *)cityName {

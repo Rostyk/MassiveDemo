@@ -29,11 +29,11 @@
 #pragma mark adding new location
 - (void) setupAddingLocation{
     UITapGestureRecognizer* tapRec = [[UITapGestureRecognizer alloc]
-                                      initWithTarget:self action:@selector(didTapMap:)];
+                                      initWithTarget:self action:@selector(mapTapped:)];
     [self.mapView addGestureRecognizer:tapRec];
 }
 
-- (void)didTapMap:(UIGestureRecognizer *)gesture {
+- (void)mapTapped:(UIGestureRecognizer *)gesture {
     CGPoint point = [gesture locationInView:self.mapView];
     CLLocationCoordinate2D coordinate = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
     
@@ -49,14 +49,19 @@
 }
 
 - (void)getCityName:(CLLocation *)location {
+    __weak typeof(self) weakSelf = self;
     [[MWLocationManager sharedManager] getCityNameOfLocation:location completion:^(CLLocation *location, NSString *cityName, NSError *error, BOOL locationServicesDisabled) {
-        
-        MWLocation *forecastLocation = [[MWLocation alloc] init];
-        forecastLocation.city = cityName;
-        forecastLocation.location = location;
-        [[MWForecastItemsManager sharedManager] addForecastLocation:forecastLocation];
-        [self performSelector:@selector(revealSidebar) withObject:self afterDelay:0.1];
-        [self removePreload];
+        if(!error) {
+            MWLocation *forecastLocation = [[MWLocation alloc] init];
+            forecastLocation.city = cityName;
+            forecastLocation.location = location;
+            [[MWForecastItemsManager sharedManager] addForecastLocation:forecastLocation];
+            [weakSelf performSelector:@selector(revealSidebar) withObject:self afterDelay:0.1];
+        }
+        else {
+            [weakSelf alert:error.localizedDescription];
+        }
+        [weakSelf removePreload];
     }];
 }
 
@@ -76,5 +81,17 @@
     }
 
 }
+
+#pragma mark alert
+
+- (void)alert:(NSString *)text {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                    message:text
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end

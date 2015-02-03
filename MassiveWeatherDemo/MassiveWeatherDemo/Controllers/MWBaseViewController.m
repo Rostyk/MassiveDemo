@@ -17,12 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)addPreload {
-    
-    //just to be on the safe side
     [self removePreload];
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
     self.hud.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];

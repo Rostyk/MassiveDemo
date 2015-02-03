@@ -54,7 +54,7 @@
 }
 
 
-#pragma mark forecast locations
+#pragma mark manage forecast locations
 
 - (void)addForecastLocation:(MWLocation *)forecastLocation {
     [self.forecastLocations addObject:forecastLocation];

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MWForecast : NSObject
 
@@ -15,4 +16,7 @@
 @property (nonatomic, strong) NSString *windDirection;
 @property (nonatomic) float windSpeed;
 @property (nonatomic, strong) NSDate *date;
+@property (nonatomic) float humidity;
+@property (nonatomic, readonly) UIImage *icon;
+
 @end

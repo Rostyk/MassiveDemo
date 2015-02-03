@@ -123,7 +123,6 @@ NSString *const MWLocationManagerErrorDomain = @"MWLocationManagerErrorDomain";
 {
     //  We accept only CLLocation with valid locationCoordinate
     CLLocation *newLocation = [locations lastObject];
-    
     _location = (CLLocationCoordinate2DIsValid(newLocation.coordinate) ? newLocation : nil);
     
     //  Turn off the location manager to preserve energy
@@ -131,12 +130,12 @@ NSString *const MWLocationManagerErrorDomain = @"MWLocationManagerErrorDomain";
     
     _errorsCount = 0;
     
-    
     //  Call location changed callback block
     if (_completionBlock) {
         [self getCityNameOfLocation:_location completion:_completionBlock];
         //  Stop previous error timeout
         [self stopErrorTimeout];
+        _completionBlock = nil;
     }
 }
 
@@ -150,7 +149,7 @@ NSString *const MWLocationManagerErrorDomain = @"MWLocationManagerErrorDomain";
             city = placemark.addressDictionary[@"FormattedAddressLines"][0];
         }
         
-        completion(location, city, nil, NO);
+        completion(location, city, error, NO);
         _completionBlock = nil;
     }];
     
@@ -180,6 +179,8 @@ NSString *const MWLocationManagerErrorDomain = @"MWLocationManagerErrorDomain";
     {
         [self locationUpdatingFailedWithError:error locationServicesDisabled:NO];
     }
+    
+    _completionBlock(nil, nil, error, NO);
 }
 
 #pragma mark - Private helper methods

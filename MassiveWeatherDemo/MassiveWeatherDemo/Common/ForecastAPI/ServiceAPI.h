@@ -19,7 +19,6 @@ typedef void(^MWWeatherXMLFailure)(id responseObject, NSError * error);
 
 + (instancetype)sharedInstance;
 
-//-----------------------------------------------------------------------------
 - (void)getWeatherForecast:(MWWeatherXMLCompletion)completion
                  failure:(MWWeatherXMLFailure)failure progress:(MWWeatherXMLProgress)progress
                  forLocation:(CLLocation *)location;

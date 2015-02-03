@@ -26,36 +26,6 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="29"/>
         </scene>
-        <!--Photo View Controller-->
-        <scene sceneID="kgq-ty-htl">
-            <objects>
-                <viewController id="TZS-9Q-uqN" customClass="MWPhotoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dvf-Ty-wBS"/>
-                        <viewControllerLayoutGuide type="bottom" id="Yur-Zl-E7j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hud-KS-64Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iY5-YB-kE0">
-                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="FoD-sC-6QG">
-                        <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="ZYa-7d-LpK"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="photoImageView" destination="iY5-YB-kE0" id="jnT-vn-APD"/>
-                        <outlet property="sidebarButton" destination="ZYa-7d-LpK" id="HyF-Zn-zRP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cr1-qf-eQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1449" y="-672"/>
-        </scene>
         <!--Map View Controller-->
         <scene sceneID="XhZ-Ni-b1j">
             <objects>
@@ -122,11 +92,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rain.png" translatesAutoresizingMaskIntoConstraints="NO" id="2sF-r9-Xct">
                                 <rect key="frame" x="205" y="365" width="13" height="13"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy.png" translatesAutoresizingMaskIntoConstraints="NO" id="hjj-gJ-Zkz">
-                                <rect key="frame" x="132" y="113" width="57" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="most_cloudy.png" translatesAutoresizingMaskIntoConstraints="NO" id="hjj-gJ-Zkz">
+                                <rect key="frame" x="128" y="106" width="68" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="LAq-Ob-iIf"/>
-                                    <constraint firstAttribute="height" constant="44" id="sn2-xd-pKX"/>
+                                    <constraint firstAttribute="width" constant="68" id="LAq-Ob-iIf"/>
+                                    <constraint firstAttribute="height" constant="68" id="sn2-xd-pKX"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="umbrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="zIK-QL-s38">
@@ -138,7 +108,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-x2-arN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kiev" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-x2-arN">
                                 <rect key="frame" x="197" y="119" width="107" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="107" id="7HG-Kl-uNy"/>
@@ -148,8 +118,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tuesday 4, Feb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-ej-Ts5">
-                                <rect key="frame" x="197" y="141" width="102" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tuesday 4, Feb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000013" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-ej-Ts5">
+                                <rect key="frame" x="197" y="141" width="107" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -167,17 +137,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iQC-hs-BMP" secondAttribute="trailing" id="6xr-M4-wx6"/>
-                            <constraint firstItem="hDg-x2-arN" firstAttribute="leading" secondItem="hjj-gJ-Zkz" secondAttribute="trailing" constant="8" id="C9n-K9-SXx"/>
+                            <constraint firstItem="hDg-x2-arN" firstAttribute="leading" secondItem="hjj-gJ-Zkz" secondAttribute="trailing" constant="1" id="C9n-K9-SXx"/>
                             <constraint firstItem="hDg-x2-arN" firstAttribute="top" secondItem="RX0-GO-ibe" secondAttribute="bottom" constant="55" id="CYA-av-SYg"/>
-                            <constraint firstAttribute="centerX" secondItem="hjj-gJ-Zkz" secondAttribute="centerX" id="FqZ-ub-Sbx"/>
-                            <constraint firstItem="hjj-gJ-Zkz" firstAttribute="top" secondItem="RX0-GO-ibe" secondAttribute="bottom" constant="49" id="G4F-4s-cfi"/>
+                            <constraint firstAttribute="centerX" secondItem="hjj-gJ-Zkz" secondAttribute="centerX" constant="-2" id="FqZ-ub-Sbx"/>
+                            <constraint firstItem="hjj-gJ-Zkz" firstAttribute="top" secondItem="RX0-GO-ibe" secondAttribute="bottom" constant="42" id="G4F-4s-cfi"/>
                             <constraint firstAttribute="centerX" secondItem="iQC-hs-BMP" secondAttribute="centerX" id="Rz8-es-sfI"/>
                             <constraint firstItem="iQC-hs-BMP" firstAttribute="top" secondItem="Iwm-zD-viH" secondAttribute="top" id="U4t-yO-UPz"/>
                             <constraint firstItem="X92-Ax-75B" firstAttribute="top" secondItem="iQC-hs-BMP" secondAttribute="bottom" id="XPZ-Rd-XTr"/>
                             <constraint firstItem="iQC-hs-BMP" firstAttribute="leading" secondItem="Iwm-zD-viH" secondAttribute="leading" id="il8-jc-5o2"/>
                             <constraint firstAttribute="trailing" secondItem="24Z-JX-st3" secondAttribute="trailing" id="iyj-p3-g0G"/>
                             <constraint firstItem="24Z-JX-st3" firstAttribute="leading" secondItem="Iwm-zD-viH" secondAttribute="leading" id="s9d-wb-Xeq"/>
-                            <constraint firstItem="24Z-JX-st3" firstAttribute="top" secondItem="hjj-gJ-Zkz" secondAttribute="bottom" constant="50" id="xhI-BX-jjd"/>
+                            <constraint firstItem="24Z-JX-st3" firstAttribute="top" secondItem="hjj-gJ-Zkz" secondAttribute="bottom" constant="33" id="xhI-BX-jjd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PL4-ln-Z8C">
@@ -188,6 +158,7 @@
                         <outlet property="cloudImageView" destination="hjj-gJ-Zkz" id="Oln-wR-vLm"/>
                         <outlet property="cloudLabel" destination="LB6-tW-p7M" id="Wmr-EI-JLT"/>
                         <outlet property="datelabel" destination="pZA-ej-Ts5" id="PNs-Q1-cDu"/>
+                        <outlet property="humidityLabel" destination="Lnr-G2-tOd" id="HB5-lh-tfK"/>
                         <outlet property="sidebarButton" destination="DJB-Dc-VO5" id="S0X-A3-1V6"/>
                         <outlet property="temperatureLabel" destination="24Z-JX-st3" id="J7E-NC-dRi"/>
                         <outlet property="windSpeedLabel" destination="MCE-p0-fne" id="5oq-9C-O0B"/>
@@ -225,12 +196,12 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diH-fz-sZN" id="9lJ-Mi-UA2">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-M7-9Sa">
-                                            <rect key="frame" x="16" y="3" width="38" height="38"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin-add.png" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-M7-9Sa">
+                                            <rect key="frame" x="16" y="7" width="30" height="30"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBb-mT-oGs">
-                                            <rect key="frame" x="62" y="7" width="169" height="31"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                            <rect key="frame" x="62" y="5" width="244" height="31"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -245,12 +216,12 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vcs-9K-Ojs" id="hug-a1-x7e">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="wzk-1b-JEX">
-                                            <rect key="frame" x="16" y="3" width="38" height="38"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin-home.png" translatesAutoresizingMaskIntoConstraints="NO" id="wzk-1b-JEX">
+                                            <rect key="frame" x="16" y="8" width="30" height="30"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEh-w7-uj4">
-                                            <rect key="frame" x="62" y="7" width="174" height="31"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                            <rect key="frame" x="62" y="5" width="174" height="31"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -265,12 +236,12 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hmy-TO-HL3" id="QGr-2Z-yM9">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="comments" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-90-Msf">
-                                            <rect key="frame" x="16" y="5" width="38" height="38"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin-normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-90-Msf">
+                                            <rect key="frame" x="16" y="7" width="30" height="30"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lviv" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M67-Ze-xvN">
-                                            <rect key="frame" x="62" y="8" width="111" height="31"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lviv" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="M67-Ze-xvN">
+                                            <rect key="frame" x="62" y="5" width="250" height="31"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -278,7 +249,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityNameLabel" destination="M67-Ze-xvN" id="vMs-jc-fsu"/>
-                                    <segue destination="bvA-Gx-XPl" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="lBh-p8-mDM"/>
+                                    <segue destination="bvA-Gx-XPl" kind="custom" identifier="city" customClass="SWRevealViewControllerSeguePushController" id="lBh-p8-mDM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -293,7 +264,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCz-Kj-4H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="21"/>
+            <point key="canvasLocation" x="433" y="19"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cWg-6b-WRA">
@@ -331,33 +302,15 @@
             </objects>
             <point key="canvasLocation" x="987" y="23"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="93V-ht-6XX">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Urp-Kf-qLB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YBR-mT-1CV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TZS-9Q-uqN" kind="relationship" relationship="rootViewController" id="7Yd-WE-uO4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FgI-O7-DTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="987" y="-672"/>
-        </scene>
     </scenes>
     <resources>
         <image name="bg.png" width="640" height="1136"/>
-        <image name="comments" width="1024" height="1024"/>
-        <image name="map" width="1024" height="1024"/>
         <image name="menu" width="22" height="22"/>
-        <image name="news" width="1024" height="1024"/>
-        <image name="partly-cloudy.png" width="114" height="88"/>
-        <image name="rain.png" width="19" height="28"/>
+        <image name="most_cloudy.png" width="100" height="100"/>
+        <image name="pin-add.png" width="76" height="76"/>
+        <image name="pin-home.png" width="76" height="76"/>
+        <image name="pin-normal.png" width="76" height="76"/>
+        <image name="rain.png" width="100" height="100"/>
         <image name="umbrella.png" width="26" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

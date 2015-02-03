@@ -9,4 +9,5 @@
 #import "MWLocation.h"
 
 @implementation MWLocation
+
 @end

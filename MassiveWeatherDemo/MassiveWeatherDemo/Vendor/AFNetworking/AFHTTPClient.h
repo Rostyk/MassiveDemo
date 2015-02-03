@@ -21,7 +21,8 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-
+#include <MobileCoreServices/MobileCoreServices.h>
+#include <SystemConfiguration/SystemConfiguration.h>
 #import <Availability.h>
 
 /**

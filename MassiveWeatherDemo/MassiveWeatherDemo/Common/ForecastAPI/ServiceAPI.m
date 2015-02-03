@@ -51,7 +51,6 @@
 - (void)startAFXMLRequestOperation:(NSURLRequest *)request
                          completion:(MWWeatherXMLCompletion)completion
                             failure:(MWWeatherXMLFailure)failure {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     __weak typeof(self) weakSelf = self;
 
     AFXMLRequestOperation *operation = [AFXMLRequestOperation XMLParserRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, NSXMLParser *XMLParser) {
@@ -70,7 +69,6 @@
     NSLog(@"API url: %@", urlString);
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:serviceUrl]];
-   // [request setHTTPMethod: @"POST"];
     [request setValue:@"text/xml" forHTTPHeaderField:@"content-type"];
     
     return request;
