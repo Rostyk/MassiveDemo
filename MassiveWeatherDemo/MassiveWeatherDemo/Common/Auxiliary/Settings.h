@@ -11,9 +11,6 @@
 
 @interface Settings : NSObject
 
-extern NSString * const kDefaultLatitude;
-extern NSString * const kDefaulLongitude;
-
 + (NSString *)forecastURL:(CLLocation*)location;
 
 @end

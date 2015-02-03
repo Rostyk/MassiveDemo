@@ -13,8 +13,6 @@
 
 NSString * const kBaseURL = @"http://api.yr.no/weatherapi/locationforecast/1.9/?%@";
 
-NSString * const kDefaultLatitude = @"";
-NSString * const kDefaulLongitude = @"";
 
 + (NSString *)forecastURL:(CLLocation *)location {
     NSString *locationString = [NSString stringWithFormat:@"lat=%f;lon=%f",location.coordinate.latitude, location.coordinate.longitude];
